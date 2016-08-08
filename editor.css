@@ -1,0 +1,252 @@
+.sortable {
+    padding: 0 14px;
+}
+
+.sortable ul {
+    list-style: none;
+    width: 50px;
+    padding: 0;
+}
+
+.sortable .sort-item {
+    margin-bottom: 10px;
+    width: 50px;
+    height: 37px;
+    border: 1px solid #ddd;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    cursor: move;
+}
+
+.sortable .sort-item.active {
+    border: 2px dashed #000;
+}
+
+.sortable .thumb-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.sortable .thumb-text {
+    background-image: url(/static/image/words_108x79.png);
+}
+
+.sortable .thumb-embed {
+    background-image: url(/static/image/link_108x79.png);
+}
+
+.sortable .thumb-video {
+    background-image: url(/static/image/video_109x79.png);
+}
+
+.sortable .thumb-product {
+    background-image: url(/static/image/archist_109x79.png);
+}
+
+.block-wrapper {
+    position: relative;
+    min-height: 40px;
+}
+
+.block-wrapper > .block {
+    margin: 20px auto;
+}
+
+.block-toolbar {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    z-index: 10;
+}
+
+.block-toolbar .tool-delete {
+    float: right;
+    margin-right: 30px;
+    margin-left: 40px;
+}
+
+.block-toolbar .tool-delete .delete {
+    background-color: #373634;
+    border-color: #373634;
+    color: #fff;
+    border-radius: 2px;
+    box-shadow: none;
+    outline: none;
+}
+
+.block-toolbar .tool-resizer {
+    float: right;
+}
+
+.block-toolbar .tool-resizer ul {
+    list-style: none;
+    padding: 8px 10px;
+    height: 36px;
+    background: #333;
+}
+
+.block-toolbar .tool-resizer .resizer-item {
+    display: inline-block;
+    margin: 0 5px;
+    height: 20px;
+    width: 30px;
+    background: #333;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.block-toolbar .tool-resizer .resizer-item.resizer-normal {
+    margin: 4px 5px;
+    height: 12px;
+    width: 24px;
+}
+
+.block-toolbar .tool-resizer .resizer-item.resizer-full {
+    margin: 0 5px;
+    height: 20px;
+}
+
+.block-toolbar .tool-resizer .resizer-item.active {
+    background: #fff;
+}
+
+.block {
+    position: relative;
+    margin: 40px auto;
+    line-height: 2;
+}
+
+.block .image-container {
+    text-align: center;
+}
+
+.block .image-container img {
+    max-width: 100%;
+}
+
+.block .video-container video {
+    width: 100%;
+    height: auto;
+}
+
+.block-product {
+    line-height: 1.5;
+}
+
+.block-text {
+    width: 67%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.block-text .text-content {
+    padding: 10px 0;
+    letter-spacing: 0.1em;
+    min-height: 50px;
+    word-break: break-all;
+    border: 2px solid transparent;
+}
+
+.block-text .text-content.placeholder::after {
+    position: absolute;
+    top: 10px;
+    content: attr(placeholder);
+    color: #a9a9a9;
+}
+
+.block-text .mce-edit-focus {
+    border: 2px dashed #ddd;
+    outline: none;
+}
+
+.block .caption {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    margin: 8px 0 0;
+    color: #666;
+    border: none;
+    outline: none;
+    line-height: 1.4;
+}
+
+.block-embed .block-content {
+    text-align: center;
+}
+
+.product-wrapper > .img-wrapper {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.product-wrapper > .img-wrapper > a {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+}
+
+.product-wrapper .product-name {
+    position: absolute;
+    text-align: left;
+    width: 100%;
+    bottom: 12px;
+    padding-left: 24px;
+    color: #fff;
+    z-index: 2;
+}
+
+.product-wrapper .product-name > h4 {
+    padding-left: 12px;
+    margin: 0;
+    font-size: 16px;
+    border-left: 1px solid #fff;
+}
+
+.product-wrapper > .img-wrapper > a > img {
+    max-width: 100%;
+}
+
+.block-wrapper .block:hover .block-toolbar {
+    display: block;
+}
+
+.sortable .img-selected {
+    border: 2px dashed #000;
+}
+
+.sortable::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sortable::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+/* 720 style */
+@media screen and (max-width: 720px) {
+    .sortable ul {
+        width: 40px;
+    }
+
+    .sortable .sort-item {
+        width: 40px;
+        height: 29px;
+    }
+
+    .block-text .text-content {
+        letter-spacing: normal;
+    }
+
+    .block-embed .block-content embed,
+    .block-embed .block-content iframe {
+        width: 100% !important;
+        height: auto;
+    }
+
+    .product-wrapper .product-name > h4 {
+        font-size: 14px;
+    }
+}
